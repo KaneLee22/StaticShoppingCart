@@ -130,6 +130,7 @@ fun ShoppingCartScreen() {
                         thickness = 1.dp
                     )
                 }
+            }
                 Spacer(modifier = Modifier.height(16.dp))
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -143,7 +144,6 @@ fun ShoppingCartScreen() {
                     // Checkout button
                     Button(
                         onClick = {
-                            // 点击后显示 Snackbar
                             coroutineScope.launch {
                                 snackbarHostState.showSnackbar(
                                     message = "Ordered",
@@ -164,4 +164,3 @@ fun ShoppingCartScreen() {
             }
         }
     }
-}
